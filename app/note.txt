@@ -1,0 +1,52 @@
+//可放入page.tsx使用
+
+//React基本語法
+//https://fju-benwu.notion.site/React-e3000dd868424359bc834b3b7ac7b64d
+
+
+//export vs export default
+//  同一份js檔案，export可以有無限多個，export default只能有一個！
+//  可以在一份文件裡同時使用export與export default
+
+
+//import vs import {}
+//  import中需不需要寫{}，則是看引入的文件是否有使用到default
+//  
+
+//Home是個函數，並且回傳要產生的內容。
+//最前面的export 及default是讓這個元件可以被使用
+// export default function Home() {
+//     return (<h1>Hello</h1>)
+//   }
+
+
+//在JSX裡，只能有一個parent元素，簡單的說，h1、h2必須被包在一個元素中
+//  error
+// export default function Home() {
+//     return (<h1>Hello</h1><h2>我是吳濟聰</h2>)
+//   }
+
+//right
+// export default function Home() {
+//     return (<div><h1>Hello</h1><h2>我是吳濟聰</h2></div>)
+//   }
+
+
+//用到import，也就是引用同一個檔案夾裡的page.module.css，並且將變數名稱設為styles。
+//  可以在程式裡面套用styles裡的內容
+import styles from './page.module.css'
+//使用JSX，因為class是javascript的保留字(用來定義類別)，所以不能使用class，而是要改用className來套用樣式
+//因為要使用到javascript裡的變數，要利用{}來取得變數，做法很像PHP的<?= >。
+export default function Home() {
+    return (<div className={styles.main}><h1>Hello</h1><h2>我是吳濟聰</h2></div>)
+  }
+
+
+//css
+//尺寸
+//  過去元件的高度會直接設定px值，也就是pixel(像素)值，在螢幕大小不相同的時候，版面就會不太一樣。現在(CSS3之後)會採用vh、vw或者vmin。vh就是瀏覽器視窗高度(viewport height)的百分比、vw就是寬度(viewport width)的百分比、vmin就是為了我們在使用手機或平板時可能會常常轉來轉去，在vh或vw中取較小的值。如:40vmin就是取vh或vw中取較小的值的40%。
+//  過去字體或間距(如:padding、margin)會直接設定px值，現在會採用rem或em，或者利用螢幕的尺寸做一些調整。
+//可以利用calc()函數進行計算
+//  font-size: calc(10px + 2vmin);
+//排版
+//  在排版的方面會採用Flex，在flex裡，元件安排方向如果是由上而下，就是設定為column。align-items，就是元件中的項目(item)，的排列方式。
