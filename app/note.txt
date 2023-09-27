@@ -42,6 +42,35 @@ export default function Home() {
   }
 
 
+
+//2023/09/20
+import styles from './page.module.css'
+// import MyName1 from './myname'
+// import {MyName2} from './myname'
+// import MyButton1  from './MyButton'
+// import {MyButton2}  from './MyButton'
+// import {MyButton3}  from './MyButton'
+import {RandomNumbersArray}  from './MyButton'
+
+export default function Home() {
+  return (
+  <div className={styles.main}>
+    <h1>Hello</h1>
+    {/* <MyName1/>
+    <MyName2/>
+    <MyButton1/>
+    <MyButton2/>
+    <MyButton2/>
+    <MyButton3/> */}
+    <RandomNumbersArray/>
+    <RandomNumbersArray/>
+  </div>
+  )
+}
+
+
+
+
 //css
 //尺寸
 //  過去元件的高度會直接設定px值，也就是pixel(像素)值，在螢幕大小不相同的時候，版面就會不太一樣。現在(CSS3之後)會採用vh、vw或者vmin。vh就是瀏覽器視窗高度(viewport height)的百分比、vw就是寬度(viewport width)的百分比、vmin就是為了我們在使用手機或平板時可能會常常轉來轉去，在vh或vw中取較小的值。如:40vmin就是取vh或vw中取較小的值的40%。

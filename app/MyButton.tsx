@@ -32,7 +32,7 @@ export default function MyButton1() {
     const [count, setCount] = useState(0);
     function handleClick() {
         setCount(count +1);
-        alert(count);
+        //alert(count);
     }
 
     return (
