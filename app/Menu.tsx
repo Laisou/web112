@@ -4,8 +4,9 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import ProductList from './productList';
+import productList11 from './productList';
 import styles from './page.module.css'
+import SelectedListItem from './product/ProductList';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -57,13 +58,16 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
+        
+        <div className={styles.main}>
         <p>首頁</p>
+            {/* <productList11 /> */}
+        </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <div className={styles.main}>
-            <ProductList />
+            <SelectedListItem />
         </div>
-        
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <p>個資</p>

@@ -79,3 +79,24 @@ export default function Home() {
 //  font-size: calc(10px + 2vmin);
 //排版
 //  在排版的方面會採用Flex，在flex裡，元件安排方向如果是由上而下，就是設定為column。align-items，就是元件中的項目(item)，的排列方式。
+
+
+//20231018
+//firebase SDK
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyANisTcbf6M5_dTWz-9pN_esMe8tC7k9tQ",
+  authDomain: "test20231018-a9ab5.firebaseapp.com",
+  projectId: "test20231018-a9ab5",
+  storageBucket: "test20231018-a9ab5.appspot.com",
+  messagingSenderId: "497654229985",
+  appId: "1:497654229985:web:47ae02055904a3877800a0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
